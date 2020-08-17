@@ -1,0 +1,117 @@
+:root{
+  font-size: 62.5%;
+  --clr-light: #f7f7ff;
+  --clr-red: #fe5f55;
+  --clr-lightBlue: #bdd5ea;
+  --clr-darkBlue: #4cc9f0;
+  --clr-black: #0c0f0a;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--clr-light);
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid var(--clr-black);
+  border-radius: 0.7rem;
+  padding: 0.2rem;
+}
+
+.display {
+  width: 100%;
+  height: 15rem;
+  background: var(--clr-black);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.previous-operation {
+  color: var(--clr-lightBlue);
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.current-operation {
+  color: var(--clr-light);
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 7rem);
+  grid-template-rows: repeat(5, 7rem);
+  border: 0.1 solid var(--clr-black);
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+}
+
+.keyboard button {
+  background: #e3e3e3;
+  border-radius: 10%;
+  font-size: 3.5rem;
+  font-weight: 400;
+  overflow: hidden;
+  box-shadow: none;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+.keyboard button:hover {
+  opacity: 0.7;
+}
+
+.keyboard button:focus {
+  border: none;
+}
+
+
+button.all-clear {
+  background: var(--clr-red);
+  color: var(--clr-light);
+}
+
+button.clear {
+  color: var(--clr-red);
+  font-size: 3.5rem;
+}
+
+button.operator {
+  color: var(--clr-darkBlue);
+  font-size: 4rem;
+}
+
+button.number {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+button.equal {
+  grid-column: span 2;
+  background: var(--clr-darkBlue);
+  color: var(--clr-light);
+  font-size: 4rem;
+  font-weight: 400;
+}
